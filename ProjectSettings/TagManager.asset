@@ -20,7 +20,7 @@ TagManager:
   - Borders
   - Obstacle
   - PlayerRange
-  - 
+  - Player
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 3120004413
     locked: 0
