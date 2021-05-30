@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6920175401078599810}
   - component: {fileID: 6920175401078599808}
   - component: {fileID: -3592441813496244022}
-  - component: {fileID: 1322385127093039930}
+  - component: {fileID: -2846720551721826564}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 2537882373423050008, guid: 055c37c5b9b9876478174cb747b5459d,
     type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.1254902, b: 0.4431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":5.0,"$type":"System.Single"},"$version":"A"},{"name":"direction","value":{"$content":1,"$type":"System.Int32"},"$version":"A"},{"name":"runKoef","value":{"$content":0.2,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":5.0,"$type":"System.Single"},"$version":"A"},{"name":"direction","value":{"$content":1,"$type":"System.Int32"},"$version":"A"},{"name":"runKoef","value":{"$content":0.2,"$type":"System.Single"},"$version":"A"},{"name":"isBlocking","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!50 &6920175401078599808
 Rigidbody2D:
@@ -185,18 +185,99 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: fdee31cd3acc73d4fa4a609031b9abda, type: 2}
---- !u!114 &1322385127093039930
-MonoBehaviour:
+--- !u!82 &-2846720551721826564
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6920175401078599868}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-62.22217,"y":102.2222},"zoom":0.9,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-241.0,"y":-54.0},"guid":"385f7b62-3505-4798-8f15-57a364a23881","$version":"A","$type":"Bolt.Update","$id":"10"},{"chainable":false,"member":{"name":"GetKey","parameterTypes":["UnityEngine.KeyCode"],"targetType":"UnityEngine.Input","targetTypeName":"UnityEngine.Input","$version":"A"},"defaultValues":{"%key":{"$content":"Space","$type":"UnityEngine.KeyCode"}},"position":{"x":-17.0,"y":-65.0},"guid":"5d3355d5-db42-4006-94ba-8b729764f6a7","$version":"A","$type":"Bolt.InvokeMember","$id":"12"},{"argumentCount":0,"defaultValues":{"name":{"$content":"hurt","$type":"System.String"},"target":null},"position":{"x":336.0,"y":-80.0},"guid":"ab4c04fc-8bc8-4bdf-ac97-1dd8e786469b","$version":"A","$type":"Bolt.TriggerCustomEvent","$id":"15"},{"defaultValues":{},"position":{"x":178.0,"y":-55.0},"guid":"bc940366-84b5-4835-b996-64f6bc626db4","$version":"A","$type":"Bolt.Branch","$id":"17"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"12"},"destinationKey":"enter","guid":"5aa82940-f295-4833-b3f8-aa880ceada91","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"exit","destinationUnit":{"$ref":"17"},"destinationKey":"enter","guid":"1d64d26a-5e85-4a4c-bbeb-dbf42ad188af","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"15"},"destinationKey":"enter","guid":"5e6a7099-2771-4a93-ac2e-0bf231a66746","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"result","destinationUnit":{"$ref":"17"},"destinationKey":"condition","guid":"8a2c56b2-3033-4de2-8d05-7972df29508d","$type":"Bolt.ValueConnection"}],"$version":"A"}}}'
-    _objectReferences: []
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 23a9b2772bd669d46bcccdac82364cd4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
