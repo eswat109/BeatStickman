@@ -368,6 +368,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8028216805704023183, guid: 4514d5fec54ba88458a436b5007060cd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8028216805704023184, guid: 4514d5fec54ba88458a436b5007060cd,
         type: 3}
       propertyPath: _data._json
@@ -375,6 +380,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4514d5fec54ba88458a436b5007060cd, type: 3}
+--- !u!1001 &546672043
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6920175401078599868, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920175401078599871, guid: 5c070f01e42fa684d9c42e8ec3d9b47f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c070f01e42fa684d9c42e8ec3d9b47f, type: 3}
 --- !u!1 &549148375
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &549148376
 Transform:
   m_ObjectHideFlags: 0
@@ -436,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"generationDelay","value":{"$content":2.0,"$type":"System.Single"},"$version":"A"},{"name":"positionLeft","value":{"x":-20.0,"y":0.0,"z":0.0,"$type":"UnityEngine.Vector3"},"$version":"A"},{"name":"positionRight","value":{"x":20.0,"y":0.0,"z":0.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"generationDelay","value":{"$content":3.0,"$type":"System.Single"},"$version":"A"},{"name":"positionLeft","value":{"x":-20.0,"y":0.0,"z":0.0,"$type":"UnityEngine.Vector3"},"$version":"A"},{"name":"positionRight","value":{"x":20.0,"y":0.0,"z":0.0,"$type":"UnityEngine.Vector3"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!1 &781008599
 GameObject:
