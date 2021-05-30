@@ -8,6 +8,7 @@ TagManager:
   - Border
   - PlayerRange
   - Audio
+  - HealthBar
   layers:
   - Default
   - TransparentFX
